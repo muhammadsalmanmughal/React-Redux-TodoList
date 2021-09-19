@@ -1,0 +1,103 @@
+ body{
+  font-family: 'Indie Flower', cursive;
+ }
+ .btnAdd{
+  position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background: #234054;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:35px 25px;
+}
+.todoCard{
+  background-color: #feff9c;
+  height: 12em;
+  width: 13em;
+  padding: 10px;
+  position: relative;
+  margin: 1em;
+  transform: rotate(4deg);
+  transition: all ease 0.4s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.todoCard a {
+  visibility: hidden;
+  text-decoration: none;
+  font-size: 10px;
+  color: #000;
+  transition: 1s;
+}
+.todoCard:hover a{
+  visibility: visible;
+  font-size: 13px;
+  }
+.todoCard:nth-child(even){
+  background-color: #82e0f6;
+  position: relative;
+  top: 5px;
+  transform: rotate(
+-6deg);
+}
+.todoCard:nth-child(3n){
+  background-color: #fe95a8;
+  position: relative;
+  top: 5px;
+  transform: rotate(2deg);
+}
+
+.todoCard:hover{
+transform: scale(1.5);
+z-index: 2;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.todoCard__delete{
+  font-size: 16px;
+  font-size: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+.btnDelete{
+  font-size: 18px;
+  font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.todo__heading{
+  height: 150px;
+    overflow: auto;
+    margin: 0px;
+}
+.todo__heading::-webkit-scrollbar{
+  width: 5px;
+}
+.todo__heading::-webkit-scrollbar-track{
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
+}
+.todo__heading::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color: rgb(82, 82, 82);
+}
+.todoCard__text{
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
