@@ -1,20 +1,15 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { FaTrashAlt } from "react-icons/fa";
-import { deleteTodo } from '../actions/todoActions';
+import { deleteTodo, updateTodo } from '../actions/todoActions';
 
 export const TodoCards = () => {
     const { data } = useSelector(state => state.todo);
-    console.log('todos ---------------> ', data);
     const dispatch = useDispatch()
-    const onTextUpdate = () => {
-        console.log('input text update');
-    }
+    // const onTextUpdate = () => {
+    //     console.log('input text update');
+    // }
 
-    const onTextBlur = (e) => {
-        console.log('e: ', e.currentTarget.textContent);
-        console.log('input text blur and update');
-    }
     // const todos = [
     //     {
     //         heading: 'task to do sfasdfa asdfasdfa asdf',
@@ -46,7 +41,7 @@ export const TodoCards = () => {
     //     }
     // ]
     return (
-        <div className='main'>
+        <div className='cardsDiv'>
             {data.map((a) => {
                 return (
                     <div className='todoCard' key={a.id}>
@@ -57,12 +52,12 @@ export const TodoCards = () => {
                         </div>
                         <div
                             // onInput={onTextUpdate}
-                            // onBlur={onTextBlur}
+                            // onBlur={() => dispatch(updateTodo(a))}
+                            // onBlur={() => onTextBlur(a)}
                             className='todo__heading'
                         // contentEditable={true}
                         // suppressContentEditableWarning={true}
                         >{a.todoItems}</div>
-                        {/* <a href=''>Read More</a> */}
                     </div>
                 )
             })}

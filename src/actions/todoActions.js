@@ -9,8 +9,6 @@ export const addTodo = (todoItems) => {
 }
 
 export const deleteTodo = (id) => {
-    console.log('id from action ', id);
-
     return {
         type: 'DELETE_TODO',
         payload: id

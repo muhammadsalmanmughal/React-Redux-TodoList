@@ -16,9 +16,7 @@ const todoReducers = (state = initState, action) => {
                 ]
             }
         case 'DELETE_TODO':
-            console.log('todo id from reducer ---->', action.payload)
             const updatedList = state.data.filter((tid) => tid.id !== action.payload)
-            // console.log('updatedList: ', updatedList);
             return {
                 ...state,
                 data: updatedList

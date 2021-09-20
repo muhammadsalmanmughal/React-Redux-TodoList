@@ -1,32 +1,47 @@
- body{
-  font-family: 'Indie Flower', cursive;
+ .error{
+  border: 1px solid #f5c6cb;
+  padding: 15px 20px;
+  margin: 35px;
+  border-radius: 5px;
+  background: #f8d7da;
+  color: #721c24;
+  font-size: 20px;
+ }
+ h1{
+   text-align: center;
+ }
+ .inputFields{
+   margin-top: 50px;
+   display: flex;
+   justify-content: center;
+ }
+ .inputFields input{
+   padding: 15px 10px;
+   font-size: 16px;
+   width: 50%;
+   border-radius: 5px;
  }
  .btnAdd{
-  position: fixed;
-    right: 10px;
-    bottom: 10px;
-    width: 60px;
-    height: 60px;
-    border: none;
-    border-radius: 50%;
-    background: #234054;
-    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
-    color: #ffffff;
-    outline: none;
+  padding: 15px;
+    font-size: 16px;
+    margin-left: 5px;
     cursor: pointer;
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-radius: 5px;
+    background: #244d7d;
+    border: none;
+    color: #fff;
  }
- .main{
+
+ .cardsDiv{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin:35px 25px;
+
 }
 .todoCard{
+  font-family: 'Indie Flower', cursive;
   background-color: #feff9c;
   height: 12em;
   width: 13em;
@@ -37,17 +52,6 @@
   transition: all ease 0.4s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-.todoCard a {
-  visibility: hidden;
-  text-decoration: none;
-  font-size: 10px;
-  color: #000;
-  transition: 1s;
-}
-.todoCard:hover a{
-  visibility: visible;
-  font-size: 13px;
-  }
 .todoCard:nth-child(even){
   background-color: #82e0f6;
   position: relative;
@@ -84,6 +88,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
   height: 150px;
     overflow: auto;
     margin: 0px;
+    font-size: 26px;
 }
 .todo__heading::-webkit-scrollbar{
   width: 5px;
