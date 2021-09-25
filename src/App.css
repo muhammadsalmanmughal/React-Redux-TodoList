@@ -1,3 +1,6 @@
+ body{
+   background: #fafafa;
+ }
  .error{
   border: 1px solid #f5c6cb;
   padding: 15px 20px;
@@ -10,6 +13,11 @@
  h1{
    text-align: center;
  }
+ .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
  .inputFields{
    margin-top: 50px;
    display: flex;
@@ -18,18 +26,33 @@
  .inputFields input{
    padding: 15px 10px;
    font-size: 16px;
-   width: 50%;
+   width: 50%!important;
    border-radius: 5px;
+   
  }
+ .inputFields input:focus{
+  outline: none; 
+}
+.numberOfTodos{
+  text-align: center;
+}
+.relaxText{
+  font-size: 26px;
+  font-weight: bold;
+}
  .btnAdd{
-  padding: 15px;
-    font-size: 16px;
-    margin-left: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    background: #244d7d;
-    border: none;
-    color: #fff;
+  background: linear-gradient(to right, #f80759, #bc4e9c);
+  padding: 15px 35px;
+  font-size: 16px;
+  margin-left: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  }
 
  .cardsDiv{
@@ -41,7 +64,6 @@
 
 }
 .todoCard{
-  font-family: 'Indie Flower', cursive;
   background-color: #feff9c;
   height: 12em;
   width: 13em;
@@ -83,9 +105,10 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
     background: none;
     border: none;
     cursor: pointer;
+    color: black;
 }
 .todo__heading{
-  height: 150px;
+  height: 137px;
     overflow: auto;
     margin: 0px;
     font-size: 26px;
